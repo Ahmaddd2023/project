@@ -1,0 +1,261 @@
+/* ------------------------------- List-item ------------------------------- */
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid rgba($snow-white-rgba, 0.1);
+
+  @include respond-to("md") {
+    align-items: flex-start;
+  }
+
+  &__icon {
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+
+  &--secondary {
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* ------------------------------- Card-primary ------------------------------- */
+
+.card-primary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 40px;
+
+  background-color: $card-bg;
+  backdrop-filter: blur(50px);
+
+  &__icon {
+    svg path {
+      stroke: $aqua-mint;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  &__title {
+  }
+
+  &__text {
+  }
+}
+
+/* ------------------------------- Card-small ------------------------------- */
+
+.card-small {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 15px;
+  background-color: $card-bg;
+
+
+  @include respond-to("sm") {
+    justify-content: center;
+  }
+    
+    @media all and (min-width: 1260px){
+        min-width: 200px;
+    }
+
+  &__icon {
+  }
+
+  &__text {
+    font-family: "SF Mono", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    color: $snow-white;
+
+    @include respond-to("sm") {
+      display: none;
+    }
+  }
+}
+
+/* ------------------------------- Card-big ------------------------------- */
+
+.card-big {
+  position: relative;
+
+  padding: 80px;
+
+  background-color: $card-bg;
+
+  &__description {
+    margin-bottom: 10px;
+
+    font-family: "SF Mono", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+
+    color: rgba($snow-white-rgba, 0.4);
+  }
+
+  &__title {
+    font-family: "SF Mono", sans-serif;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+
+    color: $aqua-mint;
+
+    @include respond-to("555px") {
+      font-size: 64px;
+    }
+  }
+
+  &__title-small {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-transform: uppercase;
+
+    color: $aqua-mint;
+
+    @include respond-to("555px") {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    font-family: "SF Pro Display", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+
+    color: $snow-white;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    margin-top: 90px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__item-icon {
+  }
+
+  &__item-content {
+  }
+
+  &__item-title {
+    color: $snow-white;
+  }
+
+  &__item-text {
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 80px;
+    left: 80px;
+
+    @include respond-to("lg") {
+      bottom: 240px;
+    }
+
+    @include respond-to("555px") {
+      left: 50px;
+    }
+
+    @include respond-to("420px") {
+      bottom: 300px;
+      left: -40px;
+    }
+  }
+
+  &--large {
+    grid-row: span 2;
+
+    @include respond-to("lg") {
+      .card-big__items {
+        margin-top: 194px;
+      }
+    }
+  }
+}
+
+/* ------------------------------- Card-long ------------------------------- */
+
+.card-long {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 80px;
+
+  background-color: $card-bg;
+    
+    @media all and (max-width: 768px){
+        gap: 20px;
+        padding: 40px 20px;
+    }
+
+  &__title {
+    font-family: "SF Mono", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+
+    color: $snow-white;
+  }
+
+  &__text {
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+
+    @include respond-to("sm") {
+      gap: 40px;
+      padding-top: 40px;
+    }
+  }
+}

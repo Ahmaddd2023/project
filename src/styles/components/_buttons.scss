@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+/* ------------------------------- Button ------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: auto;
+  height: 58px;
+  padding: 15px 40px;
+
+  font-family: "SF Mono", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.08s ease-in-out;
+}
+
+.button--main {
+  color: #0d0d0d;
+  background-color: #b6fffa;
+  box-shadow: 0 0 20px 0 rgba($black, 0.15);
+
+  @include respond-to("408px") {
+    line-height: normal;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: #d4f5f5;
+  }
+}
+
+.button--primary {
+  color: $dark-black;
+  background-color: $aqua-mint;
+  box-shadow: 0 0 20px 0 rgba($black, 0.15);
+
+  @include respond-to("408px") {
+    line-height: normal;
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: rgba($aqua-mint-rgba, 0.9);
+  }
+}
+
+.button--secondary {
+  height: 62px;
+
+  color: $aqua-mint;
+  background-color: $dark-black;
+  box-shadow: 0 0 20px 0 rgba($black, 0.15);
+
+  @include respond-to("408px") {
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: rgba($dark-black-rgba, 0.9);
+  }
+}

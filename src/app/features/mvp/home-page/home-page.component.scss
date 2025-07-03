@@ -1,0 +1,49 @@
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+}
+
+.slider-btn {
+  //font-size: 32px;
+  background: none;
+  border: none;
+  //color: #f56eac;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.slider-window {
+  overflow: hidden;
+ // width: 1200px;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease;
+  gap: 20px;
+  padding-top: 70px;
+}
+
+.slide-bnts{
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+
+
+.slide-pos{
+    position: relative;
+}
+
+.slidemap-pos{
+    position: relative;
+}
+
+.map-position{
+    position: absolute;
+    right: 0;
+    top: 150px;
+}

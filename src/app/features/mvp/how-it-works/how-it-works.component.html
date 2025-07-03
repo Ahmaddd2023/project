@@ -1,0 +1,1561 @@
+<div class="wrapper">
+<app-navigation-menu type="main"></app-navigation-menu>
+    
+<section class="how-it-header">
+<div class="container">
+<div class="how-it-wrap">
+<div class="column">
+<p class="sf-pro-text-18-pink">Wishes.inc</p>    
+<div class="column gap-10">
+<h3 class="sf-pro-display-48-white width-535">
+A place where giving happens openly
+between people.</h3>
+<p class="sf-ui-display-18-400-white width-630">
+At Wishes Inc., every donation earns you cashback, instantly added to your virtual donation wallet linked with Apple or Google Wallet. You can use these rewards to support more charities or enjoy savings while shopping at over 80,000 partnered retailers. It’s a seamless way to give back and get rewarded—turning your generosity into ongoing impact and everyday benefits. With Wishes, your donations work harder for you and the causes you care about.</p>    
+</div>     
+</div>   
+</div>   
+</div>    
+</section>  
+    
+    
+<section class="retailer">
+<div class="container">
+<div class="retailer-wrap">
+<div class="retailer-blocks">
+
+<div class="retailer-block">
+<img src="/assets/images/icons/ic_outline-card-giftcard33.svg" class="">    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">Cashback Rewards</h3>
+<p class="sf-ui-display-18-06">
+Every donation you make with Wishes Inc. nets you cashback, which goes towards your virtual donation wallet. You can then use your rewards to give further to charity or splurge on them as savings from your purchases.</p>    
+</div>    
+
+<div class="retailer-block">
+<img src="/assets/images/icons/ic_outline-loyalty.svg" class="">    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">
+Exclusive Savings and Discounts</h3>
+<p class="sf-ui-display-18-06">
+Get access to an expanding group of 80,000+ stores offering exclusive discounts, offers, and savings to Wishes Inc. users. It's our token of appreciation for your kindness.</p>    
+</div> 
+    
+<div class="retailer-block">
+<img src="/assets/images/icons/red.svg" class="">    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">Complete Transparency</h3>
+<p class="sf-ui-display-18-06">
+Understand precisely where your contribution is being directed and the way it's affecting the issues that matter to you. Our site offers complete transparency so that you can track the immediate effects of your donation.</p> 
+</div> 
+    
+</div>    
+</div>        
+</div>        
+</section> 
+    
+    
+    
+    
+<section class="estimator">
+<div class="container">
+<div class="estimator-wrap">
+    
+<div class="left-estimator">
+<div class="column width-500">
+<p class="sf-pro-text-18">Feel the Difference</p>
+<div class="column gap-10">
+<h3 class="sf-pro-display-48">Tax Deductibility Estimator</h3> 
+    
+<div class="estimator-email-input">
+
+  <input
+    type="email"
+    class="email-input-343"
+    placeholder="Your email"
+  />
+    
+  <button class="email-submit-button">Send results</button>
+
+    
+    
+</div>   
+    
+</div>    
+</div> 
+</div>    
+
+<div class="right-estimator">
+    
+       
+<div class="first-slider-cards">    
+<div class="slider-card">
+<div class="slider-info-card">     
+<h3 class="sf-range-title">{{ donationAmount }} USD</h3>
+<p class="sf-ui-disp-14-0a1748-144">How much did you donate last year?</p>
+</div>    
+<div class="range-wrapper">    
+<input
+type="range"
+min="0"
+class="custom-range"
+max="10000"
+[(ngModel)]="donationAmount"
+(input)="updateGradient()"
+       
+[ngStyle]="{ background: gradientStyle, 'border-radius': '1000px' }"/>
+</div>    
+</div>
+
+<div class="slider-card">
+<div class="slider-info-card">   
+<h3 class="sf-range-title">{{ spendingAmount }} USD</h3>
+<p class="sf-ui-disp-14-0a1748-144">
+How much do you spend on groceries, shopping and/or eating out weekly?</p>
+</div>    
+<div class="range-wrapper">       
+<input
+type="range"
+min="0"
+class="custom-range"
+max="104000"
+[(ngModel)]="spendingAmount"
+(input)="updateGradient2()"
+[ngStyle]="{ background: gradientStyle2, 'border-radius': '1000px' }"/>
+</div>    
+</div>
+</div>    
+
+<div class="second-slider-cards">   
+<div class="slider-card2 total">
+<h3 class="sf-range-title">{{ totalAmount }} USD</h3>
+<p class="sf-ui-disp-14-0a1748-144">
+The combined total from donations and shopping tax deductibility.</p>
+</div>
+
+<div class="slider-card2">
+<h3 class="sf-range-title">{{ cashbackAmount.toFixed(2) }} USD</h3>
+<p class="sf-ui-disp-14-0a1748-144">Estimated Cashback Annually.</p>
+</div>
+</div>        
+        
+
+
+</div>
+    
+</div>
+</div>    
+</section>    
+    
+    
+    
+<section class="slider wishes-padding-container">
+<div class="container">
+    
+<div class="column mob-slider">
+<p class="sf-pro-text-18">PLASTIC FOR EVERYONE</p>    
+<h3 class="sf-pro-display-48 width-740">
+Maximize Your Savings with
+the Best Cash Back credit-cards</h3>    
+</div>      
+   
+
+<div class="slide-pos mob-slider">  
+    
+<div class="slide-bnts">
+<button class="slider-btn left" (click)="prevSlide(planTrackRef.nativeElement)">
+<img src="/assets/images/icons/left-slide.svg"></button>
+<button class="slider-btn right" (click)="nextSlide(planTrackRef.nativeElement)">
+<img src="/assets/images/icons/right-slide.svg"></button>
+</div>       
+    
+<div class="slider-window">
+     
+
+<div class="slider-track" #planTrack>
+        
+
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Freedom <br>Unlimited</h3>    
+<p class="sf-ui-display-14-400-grey-18">Chase</p>    
+</div>
+<img src="/assets/images/icons/freedom.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% cash back on travel booked with Chase Travel</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+3% cash back on drugstores, restaurants, takeout and delivery</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+1.5% cash back on other purchases</p>    
+</div>  
+    
+    
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>    
+</div>  
+    
+    
+  
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Discover it</h3>    
+<p class="sf-ui-display-14-400-grey-18">American Express</p>     
+</div>
+<img src="/assets/images/icons/express.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% cash back on daily purchases on selected categories with quarterly limits</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+1% cash back on other purchases</p>    
+</div>  
+     
+        
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>      
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Double Cash</h3>    
+<p class="sf-ui-display-14-400-grey-18">Citi</p>    
+</div>
+<img src="/assets/images/icons/double.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% total cash back on hotel, car rental and attraction reservations on the Citi Travel booking site</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% one-time travel bonus</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+2% on all purchases</p>    
+</div>      
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>      
+</div>      
+    
+    
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Freedom <br>Unlimited</h3>    
+<p class="sf-ui-display-14-400-grey-18">Chase</p>    
+</div>
+<img src="/assets/images/icons/freedom.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% cash back on travel booked with Chase Travel</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+3% cash back on drugstores, restaurants, takeout and delivery</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+1.5% cash back on other purchases</p>    
+</div>  
+    
+    
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>      
+</div>  
+    
+    
+  
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Discover it</h3>    
+<p class="sf-ui-display-14-400-grey-18">American Express</p>     
+</div>
+<img src="/assets/images/icons/express.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% cash back on daily purchases on selected categories with quarterly limits</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+1% cash back on other purchases</p>    
+</div>  
+     
+        
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>        
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Double Cash</h3>    
+<p class="sf-ui-display-14-400-grey-18">Citi</p>    
+</div>
+<img src="/assets/images/icons/double.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% total cash back on hotel, car rental and attraction reservations on the Citi Travel booking site</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% one-time travel bonus</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+2% on all purchases</p>    
+</div>      
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>       
+</div>      
+    
+    
+
+    
+    
+    
+    
+
+</div> 
+</div> 
+</div>    
+</div>    
+</section>    
+    
+    
+
+    
+    
+    
+<section class="mob-scroll">
+<div class="container">  
+    
+<div class="column">
+<p class="sf-pro-text-18">PLASTIC FOR EVERYONE</p>    
+<h3 class="sf-pro-display-48 width-600">
+Maximize Your Savings with
+the Best Cash Back credit-cards</h3>   
+</div>      
+    
+</div>
+    
+<div class="donate-slider-wrapper">
+
+
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Freedom <br>Unlimited</h3>    
+<p class="sf-ui-display-14-400-grey-18">Chase</p>    
+</div>
+<img src="/assets/images/icons/freedom.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% cash back on travel booked with Chase Travel</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+3% cash back on drugstores, restaurants, takeout and delivery</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+1.5% cash back on other purchases</p>    
+</div>  
+    
+    
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>      
+</div>  
+    
+    
+  
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Discover it</h3>    
+<p class="sf-ui-display-14-400-grey-18">American Express</p>     
+</div>
+<img src="/assets/images/icons/express.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% cash back on daily purchases on selected categories with quarterly limits</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+1% cash back on other purchases</p>    
+</div>  
+     
+        
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>    
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Double Cash</h3>    
+<p class="sf-ui-display-14-400-grey-18">Citi</p>    
+</div>
+<img src="/assets/images/icons/double.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% total cash back on hotel, car rental and attraction reservations on the Citi Travel booking site</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+5% one-time travel bonus</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+2% on all purchases</p>    
+</div>      
+</div>  
+    
+<a class="plans-btn" href="https://app.wishes.inc/auth/donor-registration" target="_blank">Apply now</a>       
+</div>      
+        
+
+
+</div>     
+</section>        
+                
+    
+    
+    
+    
+    
+    
+    
+    
+<section class="grow">
+<div class="container">
+<div class="grow-wrap">
+<div class="column">
+<p class="sf-pro-text-18-pink">Wishes.inc</p>    
+<div class="column gap-10">
+<h3 class="sf-pro-display-48-white width-535">
+Grow your business.
+Give back smarter.</h3>
+<p class="sf-ui-display-18-400-white width-630">
+Replace outdated discounts with Wishes technology that drives profit,
+customer loyalty, and impact – without reducing your margins.</p>    
+</div>     
+</div>   
+</div>   
+</div>    
+</section>  
+    
+    
+    
+    
+<section class="virtual">
+<div class="container">
+<div class="virtual-wrap">
+    
+<div class="virtual-blocks">
+    
+<div class="virtual-block">
+<img src="/assets/images/icons/v1.svg" class="virtual-img-252">
+    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">
+Integrate Wishes Into Your Checkout</h3>
+    
+<p class="sf-ui-display-18-06">
+Seamless Setup with your e-commerce platform or payment gateway.</p>  
+    
+<div class="virtual-info">
+
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">  
+Our tech integrates in minutes via plugin or API.    
+</div> 
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">  
+No need to change your payment processor.   
+</div> 
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">  
+Enable Bag Booster & RefundMeVIP features instantly.   
+</div>     
+    
+</div>    
+</div> 
+    
+    
+<div class="virtual-block">
+<img src="/assets/images/icons/v2.svg" class="virtual-img-252">
+    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">
+Replace Coupons with Virtual Store Credit</h3>
+    
+<p class="sf-ui-display-18-06">
+The Bag Booster replaces discounts with store-credit issued as a virtual Mastercard.</p>  
+    
+<div class="virtual-info">
+
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Bundles products to increase Average Order Value (AOV)    
+</div> 
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Prevents profit erosion from traditional coupons   
+</div>  
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Customers still feel rewarded — with no long-term brand damage   
+</div>      
+    
+</div>    
+</div>  
+    
+    
+<div class="virtual-block">
+<img src="/assets/images/icons/v3.svg" class="virtual-img-252">
+    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">
+Enable Smart Refunds That Save Sales</h3>
+    
+<p class="sf-ui-display-18-06">
+RefundMeVIP lets you refund customers via virtual card instead of bank reversal.</p>  
+    
+<div class="virtual-info">
+
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">
+Reduces chargebacks      
+</div>    
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Increases satisfaction  
+</div>  
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Keeps customers in your ecosystem   
+</div>      
+    
+</div>    
+</div>      
+    
+</div>    
+    
+</div>        
+</div>    
+</section>  
+    
+    
+    
+    
+
+    
+    
+    
+    
+<section class="virtual-2">
+<div class="container">
+<div class="virtual-wrap">
+    
+<div class="virtual-blocks">
+    
+<div class="virtual-block">
+<img src="/assets/images/icons/v4.svg" class="virtual-img-252">
+    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">
+Join the Club 11 Retail Network</h3>
+    
+<p class="sf-ui-display-18-06">
+Get listed in our exclusive network of 76,000+ cashback-ready retailers.</p>  
+    
+<div class="virtual-info">
+
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">  
+Consumers with Wishes virtual cards can spend directly on your store 
+</div> 
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">  
+Access elite donors and supporters shopping via Wishes  
+</div> 
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">  
+Earn more while empowering good   
+</div>     
+    
+</div>    
+</div> 
+    
+    
+<div class="virtual-block">
+<img src="/assets/images/icons/v5.svg" class="virtual-img-252">
+    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">
+Analyze, Optimize, and Scale</h3>
+    
+<p class="sf-ui-display-18-06">
+Use our Merchant Dashboard to:</p>  
+    
+<div class="virtual-info">
+
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Track AOV increases, refunds issued, and customer retention  
+</div> 
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+See how charitable engagement boosts ROI 
+</div>  
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Access fraud prevention tools: BIN lookup, Digital Footprint Analysis, and more  
+</div>      
+    
+</div>    
+</div>  
+    
+    
+<div class="virtual-block">
+<img src="/assets/images/icons/v6.svg" class="virtual-img-252">
+    
+<h3 class="sf-ui-display-32-700-blue for-24-font-mob">
+100% Secure & Fully Compliant</h3>
+    
+<p class="sf-ui-display-18-06">
+Wishes uses PCI-compliant systems, advanced fraud tools, and full KYC/OFAC compliance to ensure every transaction is safe, legal, and trustworthy.</p>  
+    
+<div class="virtual-info">
+
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg">
+PCI-DSS compliant infrastructure  
+</div>    
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+OFAC, KYC, KYB, and fraud tools built-in
+</div>  
+    
+<div class="virtual-mark">
+<img src="/assets/images/icons/virtual.svg"> 
+Trusted by top ecommerce brands since 2004 
+</div>      
+    
+</div>    
+</div>      
+    
+</div>    
+    
+</div>        
+</div>    
+</section>      
+    
+    
+    
+    
+<section class="revolution">
+<div class="container">
+<div class="revolution-wrap">
+<div class="left-rev">
+<img src="/assets/images/heart.png" class="rev-mob">    
+</div>
+    
+<div class="right-rev">
+<div class="column width-535">
+
+<div class="column gap-10">
+<h3 class="sf-pro-display-48">At Wishes our ratio<br> is 97% to 3%</h3>   
+<p class="sf-ui-display-18-06">
+After four centuries of philanthropy, the government’s sole requirement is that charities maintain a minimum impact ratio of 60% to 40%. The BBB only recommends... A donation to impact ratio of 65% to 35% meaning that only 65% of funds donated have to create impact.
+<br><br>
+Wishes is governed and operated by the public nonprofit The Founder Sass Society Inc. Fintech infrastructure built for purpose to create more moments of impact everywhere.  
+</p>    
+</div>    
+</div> 
+    
+<div class="right-heart-blocks">    
+    
+<div class="campaign-block">
+<p class="sf-ui-display-48-blue">1</p>
+<div class="column gap-8">
+<h3 class="sf-ui-display-20-blue">65% to 35% ratio is NOT-ACCEPTABLE</h3>  
+</div>    
+</div>  
+    
+<div class="campaign-block">
+<p class="sf-ui-display-48-blue">2</p>
+<div class="column gap-8">
+<h3 class="sf-ui-display-20-blue">
+Donors give because they want to impact so they should be able to understand how their donations are being spent</h3>
+</div>    
+</div>   
+    
+<div class="campaign-block">
+<p class="sf-ui-display-48-blue">3</p> 
+<div class="column gap-8">
+<h3 class="sf-ui-display-20-blue">
+Transparency is our number one objective and connecting donors with the impact they want to make in this world is our goal</h3>
+
+</div>    
+</div>  
+    
+</div> 
+</div>    
+</div>    
+</div>        
+</section> 
+    
+    
+    
+ 
+    
+<section class="know">    
+</section>
+    
+    
+    
+
+<section class="ambassador">
+<div class="container">
+<div class="ambassador-wrap">
+<div class="left-ambassador">
+<div class="column width-500">
+<p class="sf-pro-text-18">
+The Challenge: Trust in Charitable Giving</p>    
+<div class="column gap-10">
+<h3 class="sf-pro-display-48">
+Empower Your Giving See the Real Impact of Every Donation You Make. Donate Now.</h3>   
+<p class="sf-ui-display-18-06">
+Most donors desire openness but never get to see the actual
+effect of their donations. Wishes.inc lets you monitor every dollar, 
+so you never have to wonder if your money helped.<br>
+TRANSPARENCY = TRUST   
+</p>    
+</div>    
+    
+<button class="ambassador-btn">Join as ambassador</button>    
+</div>    
+</div>   
+    
+    
+<div class="right-ambassador">
+    
+<div class="ambassador-blocks">
+
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Capital<br>One</h3>
+<p class="sf-ui-display-14-400-grey-18">Venture</p>    
+</div>    
+    
+<img src="/assets/images/icons/m1.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Capital<br>One</h3>
+<p class="sf-ui-display-14-400-grey-18">Platinum</p>    
+</div>    
+    
+<img src="/assets/images/icons/m2.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Petal</h3>
+<p class="sf-ui-display-14-400-grey-18">2-10% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m3.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Discover It</h3>
+<p class="sf-ui-display-14-400-grey-18">5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m4.png" class="ambassador-img2">    
+</div>  
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Discover It</h3>
+<p class="sf-ui-display-14-400-grey-18">5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m5.png" class="ambassador-img2">    
+</div>  
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Student</h3>
+<p class="sf-ui-display-14-400-grey-18">5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m6.png" class="ambassador-img2">    
+</div>  
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Double<br>Cash</h3>
+<p class="sf-ui-display-14-400-grey-18">1-5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m7.png" class="ambassador-img2">    
+</div>  
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Discover It</h3>
+<p class="sf-ui-display-14-400-grey-18">2% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m8.png" class="ambassador-img2">    
+</div>  
+    
+
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Simplicity</h3>
+<p class="sf-ui-display-14-400-grey-18">0% balance<br>transfer</p>    
+</div>    
+    
+<img src="/assets/images/icons/m9.png" class="ambassador-img2">    
+</div>      
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Diamond</h3>
+<p class="sf-ui-display-14-400-grey-18">2% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m10.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Alaska<br>Airlines
+</h3>
+<p class="sf-ui-display-14-400-grey-18">1-3x miles per $</p>    
+</div>    
+    
+<img src="/assets/images/icons/m11.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block2">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">More<br>Coming<br>Soon</h3> 
+</div>    
+    
+<img src="/assets/images/icons/m12.png" class="ambassador-img2">    
+</div>       
+        
+    
+</div>
+    
+</div>    
+</div>    
+</div>        
+</section>  
+    
+    
+<section class="mob-scroll">
+
+    
+<div class="donate-slider-wrapper">
+
+
+    
+<div class="ambassador-blocks-mob">
+
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Capital<br>One</h3>
+<p class="sf-ui-display-14-400-grey-18">Venture</p>    
+</div>    
+    
+<img src="/assets/images/icons/m1.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Capital<br>One</h3>
+<p class="sf-ui-display-14-400-grey-18">Platinum</p>    
+</div>    
+    
+<img src="/assets/images/icons/m2.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Petal</h3>
+<p class="sf-ui-display-14-400-grey-18">2-10% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m3.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Discover It</h3>
+<p class="sf-ui-display-14-400-grey-18">5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m4.png" class="ambassador-img2">    
+</div>  
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Discover It</h3>
+<p class="sf-ui-display-14-400-grey-18">5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m5.png" class="ambassador-img2">    
+</div>  
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Student</h3>
+<p class="sf-ui-display-14-400-grey-18">5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m6.png" class="ambassador-img2">    
+</div>  
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Double<br>Cash</h3>
+<p class="sf-ui-display-14-400-grey-18">1-5% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m7.png" class="ambassador-img2">    
+</div>  
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Discover It</h3>
+<p class="sf-ui-display-14-400-grey-18">2% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m8.png" class="ambassador-img2">    
+</div>  
+    
+
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Simplicity</h3>
+<p class="sf-ui-display-14-400-grey-18">0% balance<br>transfer</p>    
+</div>    
+    
+<img src="/assets/images/icons/m9.png" class="ambassador-img2">    
+</div>      
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Diamond</h3>
+<p class="sf-ui-display-14-400-grey-18">2% cashback</p>    
+</div>    
+    
+<img src="/assets/images/icons/m10.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">Alaska<br>Airlines
+</h3>
+<p class="sf-ui-display-14-400-grey-18">1-3x miles per $</p>    
+</div>    
+    
+<img src="/assets/images/icons/m11.png" class="ambassador-img2">    
+</div>   
+    
+    
+<div class="ambassador-block2">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">More<br>Coming<br>Soon</h3> 
+</div>    
+    
+<img src="/assets/images/icons/m12.png" class="ambassador-img2">    
+</div>       
+        
+    
+</div>
+
+
+
+
+</div>     
+</section>        
+               
+    
+    
+    
+    
+    
+<section class="revolution">
+<div class="container">
+<div class="revolution-wrap">
+<div class="left-rev">
+<img src="/assets/images/amb.png" class="rev-mob">    
+</div>
+    
+<div class="right-rev">
+<div class="column width-535">
+<p class="sf-pro-text-18">
+Earn up to 3% more cashback<br> at 76,000+ retailers nationwide</p>    
+<div class="column gap-10">
+<h3 class="sf-pro-display-48">Ambassador Program</h3>   
+<p class="sf-ui-display-18-06">
+Join the Wishes Ambassador Program and unlock exclusive cashback rewards. As an Ambassador, you’ll gain access to top brands and popular stores nationwide. Our innovative search feature lets you easily find deals by brand, product, or zip code.
+<br><br>
+Make greater impact by taking meaningful actions, elevating your donor status, and maximizing your rewards while giving back.    
+</p>    
+</div>    
+</div>      
+</div>    
+</div>    
+</div>        
+</section> 
+    
+    
+    
+    
+    
+
+    
+<section class="slider wishes-padding-container">
+<div class="container">
+    
+<div class="column mob-slider">
+<p class="sf-pro-text-18">PLASTIC FOR EVERYONE</p>    
+<h3 class="sf-pro-display-48 width-740">
+Maximize Your Savings with
+the Best Cash Back credit-cards</h3>    
+</div>      
+   
+
+<div class="slide-pos mob-slider">  
+    
+<div class="slide-bnts">
+<button class="slider-btn left" (click)="prevSlide(sliderTrackRef.nativeElement)">
+<img src="/assets/images/icons/left-slide.svg"></button>
+<button class="slider-btn right" (click)="nextSlide(sliderTrackRef.nativeElement)">
+<img src="/assets/images/icons/right-slide.svg"></button>
+</div>       
+    
+<div class="slider-window">
+     
+
+<div class="slider-track" #sliderTrack>
+        
+
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Diamond</h3>    
+<p class="sf-ui-display-14-400-grey-18">100.000 USD</p>    
+</div>
+<img src="/assets/images/icons/diamond.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Showcase the Wishes logo and transparency guarantee on your site.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to any cause with clear reporting, unlimited charity options, and tax-deductible receipts.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Get featured on the Wishes website, newsletter, press releases, social media, and YouTube as a sponsor with logo inclusion and company info.</p>    
+</div>  
+    
+    
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>    
+</div>  
+    
+    
+  
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Platinum</h3>    
+<p class="sf-ui-display-14-400-grey-18">50.000 USD</p>     
+</div>
+<img src="/assets/images/icons/platimun.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Display the Wishes logo and transparency guarantee on your website.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to up to 5 charities across 5 URLs with full reporting.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Receive tax-deductible receipts, be featured in our newsletter and press release.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Get listed on the Wishes site with sponsor logo placement on web, social media, and YouTube.</p>    
+</div>  
+        
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>    
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Gold</h3>    
+<p class="sf-ui-display-14-400-grey-18">25.000 USD</p>    
+</div>
+<img src="/assets/images/icons/gold.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to up to 2 charities across 2 URLs through Wishes with transparent reporting.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Receive tax-deductible receipts, get featured in our newsletter and press release.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Have your company listed on the Wishes website with sponsor logo placement on web, social media, and YouTube.</p>    
+</div>      
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>    
+</div>      
+    
+    
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Diamond</h3>    
+<p class="sf-ui-display-14-400-grey-18">100.000 USD</p>    
+</div>
+<img src="/assets/images/icons/diamond.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Showcase the Wishes logo and transparency guarantee on your site.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to any cause with clear reporting, unlimited charity options, and tax-deductible receipts.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Get featured on the Wishes website, newsletter, press releases, social media, and YouTube as a sponsor with logo inclusion and company info.</p>    
+</div>  
+    
+    
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>   
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Platinum</h3>    
+<p class="sf-ui-display-14-400-grey-18">50.000 USD</p>     
+</div>
+<img src="/assets/images/icons/platimun.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Display the Wishes logo and transparency guarantee on your website.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to up to 5 charities across 5 URLs with full reporting.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Receive tax-deductible receipts, be featured in our newsletter and press release.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Get listed on the Wishes site with sponsor logo placement on web, social media, and YouTube.</p>    
+</div>  
+        
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>     
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Gold</h3>    
+<p class="sf-ui-display-14-400-grey-18">25.000 USD</p>    
+</div>
+<img src="/assets/images/icons/gold.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to up to 2 charities across 2 URLs through Wishes with transparent reporting.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Receive tax-deductible receipts, get featured in our newsletter and press release.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Have your company listed on the Wishes website with sponsor logo placement on web, social media, and YouTube.</p>    
+</div>      
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>     
+</div>         
+    
+
+</div> 
+</div> 
+</div>    
+</div>    
+</section>    
+    
+    
+
+    
+    
+    
+<section class="mob-scroll">
+<div class="container">  
+    
+<div class="column">
+<p class="sf-pro-text-18">PLASTIC FOR EVERYONE</p>    
+<h3 class="sf-pro-display-48 width-600">
+Maximize Your Savings with
+the Best Cash Back credit-cards</h3>   
+</div>      
+    
+</div>
+    
+<div class="donate-slider-wrapper">
+
+
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Diamond</h3>    
+<p class="sf-ui-display-14-400-grey-18">100.000 USD</p>    
+</div>
+<img src="/assets/images/icons/diamond.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Showcase the Wishes logo and transparency guarantee on your site.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to any cause with clear reporting, unlimited charity options, and tax-deductible receipts.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Get featured on the Wishes website, newsletter, press releases, social media, and YouTube as a sponsor with logo inclusion and company info.</p>    
+</div>  
+    
+    
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>    
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Platinum</h3>    
+<p class="sf-ui-display-14-400-grey-18">50.000 USD</p>     
+</div>
+<img src="/assets/images/icons/platimun.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Display the Wishes logo and transparency guarantee on your website.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to up to 5 charities across 5 URLs with full reporting.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Receive tax-deductible receipts, be featured in our newsletter and press release.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Get listed on the Wishes site with sponsor logo placement on web, social media, and YouTube.</p>    
+</div>  
+        
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>      
+</div>  
+    
+    
+<div class="plan-block-v333">
+    
+<div class="plan-header-v333">
+<div class="column">
+<h3 class="sf-ui-display-18-700-blue-18">
+Gold</h3>    
+<p class="sf-ui-display-14-400-grey-18">25.000 USD</p>    
+</div>
+<img src="/assets/images/icons/gold.png" class="donor-card-img-v252">    
+</div>    
+    
+<div class="plan-info">
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Donate to up to 2 charities across 2 URLs through Wishes with transparent reporting.</p>    
+</div> 
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Receive tax-deductible receipts, get featured in our newsletter and press release.</p>    
+</div>  
+    
+<div class="plan-info-block">
+<img src="/assets/images/icons/akar-icons_check-box.svg"> 
+<p class="sf-ui-display-18-700-blue-18">
+Have your company listed on the Wishes website with sponsor logo placement on web, social media, and YouTube.</p>    
+</div>      
+</div>  
+    
+<a class="plans-btn" href="https://wishes.dev.brn.ai/auth/fundraiser/role" target="_blank">Apply now</a>    
+</div> 
+    
+</div>     
+</section>        
+            
+        
+
+    
+    
+<app-footer type="default"></app-footer>     
+</div>

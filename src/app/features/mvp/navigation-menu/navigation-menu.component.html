@@ -1,0 +1,976 @@
+<div class="navbar desktop-nav" *ngIf="type === 'main'">
+  <div class="navbar-column">
+    <div class="blue-nav">
+      <div class="container">
+        <div class="blue-nav-wrap">
+          <div class="soc-med">
+            <a
+              href="https://www.instagram.com/wishes_official01/"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/inst.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.facebook.com/wishesincofficial"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/fb.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://x.com/Wishes0fficial"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/x.svg" alt="Twitter" />
+            </a>
+            <a
+              href="https://www.youtube.com/@wishesinc"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/yb.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/wishesinc/" target="_blank" class="social-link">
+              <img src="/assets/images/icons/ln.png" alt="LinkedIn" />
+            </a>
+          </div>
+
+          <div class="navbar-row">
+            <div class="navbar-adress">
+              <img src="/assets/images/icons/inbox.svg" />
+              PO Box 33122, Los Gatos, CA 95030
+            </div>
+
+            <div class="navbar-email">
+              <img src="/assets/images/icons/email.svg" />
+              needhelp&#64;wishes.inc
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-nav">
+      <div class="container">
+        <div class="white-nav-wrap">
+          <div class="logo">
+            <img src="/assets/images/logo.svg" />
+          </div>
+
+          <div class="navbar-row-v2">
+            <div class="white-nav-links">
+              <a
+                class="white-nav-link"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/home')"
+                >Home</a
+              >
+
+              <a
+                class="white-nav-link"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/about-us')"
+                >About us</a
+              >
+
+              <a
+                class="white-nav-link"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/how-it-works')"
+                >How it works</a
+              >
+
+              <a
+                class="white-nav-link"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/success-stories')"
+                >Success stories</a
+              >
+
+              <a
+                class="white-nav-link"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/ai-strategy')"
+                >AI Strategy</a
+              >
+
+              <a
+                class="white-nav-link"
+                (click)="goToDomain('wishespay.com', '/business')"
+              >
+                Wishes Pay
+              </a>
+
+              <a
+                class="white-nav-link"
+                (click)="goToDomain('wishes.gives', '/non-profits')"
+              >
+                Wishes Gives
+              </a>
+
+              <a
+                class="white-nav-link"
+                (click)="goToDomain('wishes.fund', '/donors')"
+              >
+                Wishes Fund
+              </a>
+
+              <button
+                class="white-nav-link"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLink="/"
+                [disabled]="isDisabled"
+                disabled
+              >
+                Wishes Shopping
+              </button>
+            </div>
+
+            <a class="sign-in-btn" href="https://app.wishes.inc/auth/login" target="_blank">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mob-header" *ngIf="type === 'main'">
+  <div class="blue-nav">
+    <div class="blue-nav-wrap">
+      <div class="soc-med">
+        <a
+          href="https://www.instagram.com/wishes_official01/"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/inst.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/wishesincofficial"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/fb.svg" alt="Facebook" />
+        </a>
+        <a
+          href="https://x.com/Wishes0fficial"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/x.svg" alt="Twitter" />
+        </a>
+        <a
+          href="https://www.youtube.com/@wishesinc"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/yb.svg" alt="YouTube" />
+        </a>
+        <a href="https://www.linkedin.com/company/wishesinc/" target="_blank" class="social-link">
+          <img src="/assets/images/icons/ln.png" alt="LinkedIn" />
+        </a>
+      </div>
+
+      <div class="navbar-email">
+        <img src="/assets/images/icons/email.svg" />
+        needhelp&#64;wishes.inc
+      </div>
+    </div>
+  </div>
+
+  <div class="container mob-header-wrap">
+    <button class="burger-btn" (click)="toggleMenu()">
+      <img
+        [src]="
+          menuOpen
+            ? '/assets/images/icons/close.svg'
+            : '/assets/images/icons/burger.svg'
+        "
+        alt="Menu"
+      />
+    </button>
+
+    <div class="mob-navbar-row gap-10">
+      <div class="logo-wrap">
+        <img src="/assets/images/logo.svg" alt="Logo" class="logo" />
+      </div>
+
+      <div class="mob-page-title">
+        {{ menuOpen ? "Navigation" : currentPageTitle }}
+      </div>
+    </div>
+  </div>
+
+  <nav
+    class="mob-nav"
+    [class.active]="menuOpen"
+    [ngClass]="{ active: menuOpen }"
+  >
+    <div class="mob-nav-links">
+      <a
+        class="mob-nav-link"
+        (click)="goToDomain('wishes.inc', '/home')"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nav1.svg" />Home</a
+      >
+
+      <a
+        class="mob-nav-link"
+        (click)="goToDomain('wishes.inc', '/about-us')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nav2.svg" />About us</a
+      >
+
+      <a
+        class="mob-nav-link"
+        (click)="goToDomain('wishes.inc', '/how-it-works')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nav6.svg" />How it works</a
+      >
+
+      <a
+        class="mob-nav-link"
+        (click)="goToDomain('wishes.inc', '/success-stories')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        ><img src="/assets/images/icons/nav7.svg" />Success stories</a
+      >
+
+      <a
+        class="mob-nav-link"
+        (click)="goToDomain('wishes.inc', '/ai-strategy')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        ><img src="/assets/images/icons/ic_outline-area-chart.svg" />AI
+        Strategy</a
+      >
+
+      <a
+        class="mob-nav-link"
+        (click)="goToDomain('wishespay.com', '/business')"
+      >
+        routerLinkActive="active-link" (click)="closeMenu()">
+        <img src="/assets/images/icons/ic_outline-credit-card.svg" />Wishes
+        Pay</a
+      >
+
+      <a
+        class="mob-nav-link"
+        (click)="goToDomain('wishes.gives', '/non-profits')"
+      >
+        routerLinkActive="active-link" (click)="closeMenu()">
+        <img src="/assets/images/icons/ic_outline-handshake.svg" />Wishes
+        Gives</a
+      >
+      <a class="mob-nav-link" (click)="goToDomain('wishes.fund', '/donors')">
+        routerLinkActive="active-link" (click)="closeMenu()">
+        <img src="/assets/images/icons/ic_outline-favorite-border2.svg" />Wishes
+        Fund</a
+      >
+
+      <button
+        class="mob-nav-link"
+        routerLink="/"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        [disabled]="isDisabled"
+      >
+        <img
+          src="/assets/images/icons/ic_outline-storefront.svg"
+          disabled
+        />Wishes Shopping
+      </button>
+    </div>
+
+    <div class="nav-breaker"></div>
+
+    <div class="navbar-mob-inbox">
+      <div class="navbar-mob-adress">
+        <img src="/assets/images/icons/inbox2.svg" />
+        PO Box 33122, Los Gatos, CA 95030
+      </div>
+
+      <div class="navbar-mob-email">
+        <img src="/assets/images/icons/email2.svg" />
+        needhelp&#64;wishes.inc
+      </div>
+    </div>
+
+    <div class="nav-breaker"></div>
+
+    <div class="nav-bottom">
+      <a class="sign-in-btn" href="https://app.wishes.inc/auth/login" target="_blank">Sign in</a>
+    </div>
+  </nav>
+</div>
+
+<div class="navbar-pay desktop-nav" *ngIf="type === 'pay'">
+  <div class="navbar-column">
+    <div class="blue-nav-pay">
+      <div class="container">
+        <div class="blue-nav-wrap">
+          <div class="soc-med">
+            <a
+              href="https://www.instagram.com/wishes_official01/"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/inst.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.facebook.com/wishesincofficial"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/fb.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://x.com/Wishes0fficial"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/x.svg" alt="Twitter" />
+            </a>
+            <a
+              href="https://www.youtube.com/@wishesinc"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/yb.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/wishesinc/" target="_blank" class="social-link">
+              <img src="/assets/images/icons/ln.png" alt="LinkedIn" />
+            </a>
+          </div>
+
+          <div class="navbar-row">
+            <div class="navbar-adress">
+              <img src="/assets/images/icons/inbox.svg" />
+              PO Box 33122, Los Gatos, CA 95030
+            </div>
+
+            <div class="navbar-email">
+              <img src="/assets/images/icons/email.svg" />
+              needhelp&#64;wishes.inc
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-nav-pay">
+      <div class="container">
+        <div class="white-nav-wrap">
+          <div class="logo">
+            <img src="/assets/images/icons/yellow-logo.svg" />
+          </div>
+
+          <div class="navbar-row-v2">
+            <div class="white-nav-links">
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/home')"
+                >Home</a
+              >
+
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/about-us')"
+                >About us</a
+              >
+
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/how-it-works')"
+                >How it works</a
+              >
+
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/success-stories')"
+                >Success stories</a
+              >
+
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/ai-strategy')"
+                >AI Strategy</a
+              >
+
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishespay.com', '/business')"
+                >Wishes Pay</a
+              >
+
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.gives', '/non-profits')"
+                >Wishes Gives</a
+              >
+
+              <a
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.fund', '/donors')"
+                >Wishes Fund</a
+              >
+
+              <button
+                class="white-nav-link-pay"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLink="/"
+                [disabled]="isDisabled"
+                disabled
+              >
+                Wishes Shopping
+              </button>
+            </div>
+
+            <a class="sign-in-btn-pay" href="https://app.wishes.inc/auth/login" target="_blank">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mob-header-pay" *ngIf="type === 'pay'">
+  <div class="blue-nav-pay">
+    <div class="blue-nav-wrap">
+      <div class="soc-med">
+        <a
+          href="https://www.instagram.com/wishes_official01/"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/inst.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/wishesincofficial"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/fb.svg" alt="Facebook" />
+        </a>
+        <a
+          href="https://x.com/Wishes0fficial"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/x.svg" alt="Twitter" />
+        </a>
+        <a
+          href="https://www.youtube.com/@wishesinc"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/yb.svg" alt="YouTube" />
+        </a>
+        <a href="https://www.linkedin.com/company/wishesinc/" target="_blank" class="social-link">
+          <img
+            src="/assets/images/icons/entypo-social_linkedin-with-circle3.svg"
+            alt="LinkedIn"
+          />
+        </a>
+      </div>
+
+      <div class="navbar-email">
+        <img src="/assets/images/icons/email.svg" />
+        needhelp&#64;wishes.inc
+      </div>
+    </div>
+  </div>
+
+  <div class="container mob-header-wrap">
+    <button class="burger-btn" (click)="toggleMenu()">
+      <img
+        [src]="
+          menuOpen
+            ? '/assets/images/icons/close2.svg'
+            : '/assets/images/icons/ic_outline-menu.svg'
+        "
+        alt="Menu"
+      />
+    </button>
+
+    <div class="mob-navbar-row gap-10">
+      <div class="logo-wrap">
+        <img
+          src="/assets/images/icons/yellow-mob.svg"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+
+      <div class="mob-page-title-pay">
+        {{ menuOpen ? "Navigation" : currentPageTitle }}
+      </div>
+    </div>
+  </div>
+
+  <nav
+    class="mob-nav-pay"
+    [class.active]="menuOpen"
+    [ngClass]="{ active: menuOpen }"
+  >
+    <div class="mob-nav-links">
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishes.inc', '/home')"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/p1.svg" />Home</a
+      >
+
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishes.inc', '/about-us')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/p2.svg" />About us</a
+      >
+
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishes.inc', '/how-it-works')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/p3.svg" />How it works</a
+      >
+
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishes.inc', '/success-stories')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        ><img src="/assets/images/icons/p4.svg" />Success stories</a
+      >
+
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishes.inc', '/ai-strategy')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        ><img src="/assets/images/icons/p5.svg" />AI Strategy</a
+      >
+
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishespay.com', '/business')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/p6.svg" />Wishes Pay</a
+      >
+
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishes.gives', '/non-profits')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/p7.svg" />Wishes Gives</a
+      >
+      <a
+        class="mob-nav-link-pay"
+        (click)="goToDomain('wishes.fund', '/donors')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/p8.svg" />Wishes Fund</a
+      >
+
+      <button
+        class="mob-nav-link-pay"
+        routerLink="/"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        [disabled]="isDisabled"
+      >
+        <img src="/assets/images/icons/p9.svg" disabled />Wishes Shopping
+      </button>
+    </div>
+
+    <div class="nav-breaker"></div>
+
+    <div class="navbar-mob-inbox">
+      <div class="navbar-mob-adress">
+        <img src="/assets/images/icons/p10.svg" />
+        PO Box 33122, Los Gatos, CA 95030
+      </div>
+
+      <div class="navbar-mob-email">
+        <img src="/assets/images/icons/p11.svg" />
+        needhelp&#64;wishes.inc
+      </div>
+    </div>
+
+    <div class="nav-breaker"></div>
+
+    <div class="nav-bottom">
+      <a class="sign-in-btn-pay" href="https://app.wishes.inc/auth/login" target="_blank">Sign in</a>
+    </div>
+  </nav>
+</div>
+
+<div class="navbar-fund desktop-nav" *ngIf="type === 'fund'">
+  <div class="navbar-column">
+    <div class="blue-nav-fund">
+      <div class="container">
+        <div class="blue-nav-wrap">
+          <div class="soc-med">
+            <a
+              href="https://www.instagram.com/wishes_official01/"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/inst.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.facebook.com/wishesincofficial"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/fb.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://x.com/Wishes0fficial"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/x.svg" alt="Twitter" />
+            </a>
+            <a
+              href="https://www.youtube.com/@wishesinc"
+              target="_blank"
+              class="social-link"
+            >
+              <img src="/assets/images/icons/yb.svg" alt="YouTube" />
+            </a>
+            <a href="https://www.linkedin.com/company/wishesinc/" target="_blank" class="social-link">
+              <img src="/assets/images/icons/ln.png" alt="LinkedIn" />
+            </a>
+          </div>
+
+          <div class="navbar-row">
+            <div class="navbar-adress">
+              <img src="/assets/images/icons/inbox.svg" />
+              PO Box 33122, Los Gatos, CA 95030
+            </div>
+
+            <div class="navbar-email">
+              <img src="/assets/images/icons/email.svg" />
+              needhelp&#64;wishes.inc
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="white-nav-fund">
+      <div class="container">
+        <div class="white-nav-wrap">
+          <div class="logo">
+            <img src="/assets/images/icons/greenlogo.svg" />
+          </div>
+
+          <div class="navbar-row-v2">
+            <div class="white-nav-links">
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/home')"
+                >Home</a
+              >
+
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/about-us')"
+                >About us</a
+              >
+
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/how-it-works')"
+                >How it works</a
+              >
+
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/success-stories')"
+                >Success stories</a
+              >
+
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.inc', '/ai-strategy')"
+                >AI Strategy</a
+              >
+
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishespay.com', '/business')"
+                >Wishes Pay</a
+              >
+
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.gives', '/non-profits')"
+                >Wishes Gives</a
+              >
+
+              <a
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                (click)="goToDomain('wishes.fund', '/donors')"
+                >Wishes Fund</a
+              >
+
+              <button
+                class="white-nav-link-fund"
+                routerLinkActive="active-link"
+                [routerLinkActiveOptions]="{ exact: true }"
+                routerLink="/"
+                [disabled]="isDisabled"
+                disabled
+              >
+                Wishes Shopping
+              </button>
+            </div>
+
+            <a class="sign-in-btn-fund" href="https://app.wishes.inc/auth/login" target="_blank">Sign in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mob-header-fund" *ngIf="type === 'fund'">
+  <div class="blue-nav-fund">
+    <div class="blue-nav-wrap">
+      <div class="soc-med">
+        <a
+          href="https://www.instagram.com/wishes_official01/"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/inst.svg" alt="Instagram" />
+        </a>
+        <a
+          href="https://www.facebook.com/wishesincofficial"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/fb.svg" alt="Facebook" />
+        </a>
+        <a
+          href="https://x.com/Wishes0fficial"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/x.svg" alt="Twitter" />
+        </a>
+        <a
+          href="https://www.youtube.com/@wishesinc"
+          target="_blank"
+          class="social-link"
+        >
+          <img src="/assets/images/icons/yb.svg" alt="YouTube" />
+        </a>
+        <a href="https://www.linkedin.com/company/wishesinc/" target="_blank" class="social-link">
+          <img
+            src="/assets/images/icons/entypo-social_linkedin-with-circle3.svg"
+            alt="LinkedIn"
+          />
+        </a>
+      </div>
+
+      <div class="navbar-email">
+        <img src="/assets/images/icons/email.svg" />
+        needhelp&#64;wishes.inc
+      </div>
+    </div>
+  </div>
+
+  <div class="container mob-header-wrap-fund">
+    <button class="burger-btn" (click)="toggleMenu()">
+      <img
+        [src]="
+          menuOpen
+            ? '/assets/images/icons/close3.svg'
+            : '/assets/images/icons/blueburger.svg'
+        "
+        alt="Menu"
+      />
+    </button>
+
+    <div class="mob-navbar-row gap-10">
+      <div class="logo-wrap">
+        <img src="/assets/images/icons/greenmob.svg" alt="Logo" class="logo" />
+      </div>
+
+      <div class="mob-page-title-fund">
+        {{ menuOpen ? "Navigation" : currentPageTitle }}
+      </div>
+    </div>
+  </div>
+
+  <nav
+    class="mob-nav-fund"
+    [class.active]="menuOpen"
+    [ngClass]="{ active: menuOpen }"
+  >
+    <div class="mob-nav-links">
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishes.inc', '/home')"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nn1.svg" />Home</a
+      >
+
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishes.inc', '/about-us')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nn2.svg" />About us</a
+      >
+
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishes.inc', '/how-it-works')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nn3.svg" />How it works</a
+      >
+
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishes.inc', '/success-stories')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        ><img src="/assets/images/icons/nn4.svg" />Success stories</a
+      >
+
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishes.inc', '/ai-strategy')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        ><img src="/assets/images/icons/nn5.svg" />AI Strategy</a
+      >
+
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishespay.com', '/business')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nn6.svg" />Wishes Pay</a
+      >
+
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishes.gives', '/non-profits')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nn7.svg" />Wishes Gives</a
+      >
+      <a
+        class="mob-nav-link-fund"
+        (click)="goToDomain('wishes.fund', '/donors')"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+      >
+        <img src="/assets/images/icons/nn8.svg" />Wishes Fund</a
+      >
+
+      <button
+        class="mob-nav-link-fund"
+        routerLink="/"
+        routerLinkActive="active-link"
+        (click)="closeMenu()"
+        [disabled]="isDisabled"
+      >
+        <img src="/assets/images/icons/nn9.svg" disabled />Wishes Shopping
+      </button>
+    </div>
+
+    <div class="nav-breaker"></div>
+
+    <div class="navbar-mob-inbox">
+      <div class="navbar-mob-adress">
+        <img src="/assets/images/icons/nn10.svg" />
+        PO Box 33122, Los Gatos, CA 95030
+      </div>
+
+      <div class="navbar-mob-email">
+        <img src="/assets/images/icons/nn11.svg" />
+        needhelp&#64;wishes.inc
+      </div>
+    </div>
+
+    <div class="nav-breaker"></div>
+
+    <div class="nav-bottom">
+      <a class="sign-in-btn-fund" href="https://app.wishes.inc/auth/login" target="_blank">Sign in</a>
+    </div>
+  </nav>
+</div>
