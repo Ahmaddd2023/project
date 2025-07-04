@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-home-page',
@@ -6,10 +7,15 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements AfterViewInit {
+  constructor(private viewportScroller: ViewportScroller) {}
+  
   @ViewChild('sliderTrack', { static: false }) trackRef!: ElementRef;
 
     //currentSlideOffset = 0;
     isSliding = false;
+   email = '';
+   subscribed = false;
+   invalidEmail = false;
 
   ngAfterViewInit(): void {
     this.ensureMinimumSlides();
@@ -69,6 +75,29 @@ export class HomePageComponent implements AfterViewInit {
       track.appendChild(clone);
     }
   }
+  
+    scrollToSection() {
+      const yOffset = 100; 
+      const element = document.getElementById('about-product');
+      if (element) {
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }
+
+  subscribe() {
+    if (this.validateEmail(this.email)) {
+      this.subscribed = true;
+      this.invalidEmail = false;
+    } else {
+      this.invalidEmail = true;
+    }
+  }
+
+  validateEmail(email: string): boolean {
+    return email.includes('@');
+  }
+
 }
 
 
